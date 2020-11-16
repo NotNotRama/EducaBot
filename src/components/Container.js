@@ -9,7 +9,7 @@ import Preguntas from './Preguntas';
 
 const useStyles = makeStyles({
   mg: {
-    marginTop: 50,
+    marginTop: 20,
   },
 });
 
@@ -19,13 +19,21 @@ export default function container() {
     <Grid container justify="center" alignItems="center" spacing={5}>
       <Grid item xs={12}>
         <Box pl={7} pt={2}>
-          <Typography variant="h5" component="h5">
+          <Typography
+            variant="h5"
+            component="h5"
+            style={{
+              fontFamily: 'DM Sans',
+              color: '#4F36D6',
+              fontWeight: '500',
+            }}
+          >
             Listones Tareas (Perfil Alumno)
           </Typography>
         </Box>
       </Grid>
       <Grid item xs={12} sm={3}>
-        <Box className={classes.mg} pl={7} pt={2}>
+        <Box className={classes.mg} pl={[7, 5, 14, 18]} pt={2}>
           <Typography variant="h8" component="h5">
             LECTURAS
           </Typography>

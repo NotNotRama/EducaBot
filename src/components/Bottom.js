@@ -45,7 +45,10 @@ export default function Bottom() {
         container
       >
         <Grid item>
-          <Brightness1Icon style={{ color: '#01CEAA' }} fontSize="small" />
+          <Brightness1Icon
+            style={{ color: '#01CEAA', paddingTop: 5 }}
+            fontSize="small"
+          />
         </Grid>
         <Grid item>
           <Typography>Lengua</Typography>
