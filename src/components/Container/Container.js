@@ -3,8 +3,8 @@
 import { Grid } from '@material-ui/core';
 import MainTitle from '../Container/MainTitle';
 import Title from '../Container/Title';
-import Lecutras from '../Lecturas';
-import Preguntas from '../Preguntas';
+import Lecutras from '../Homework/Lecturas';
+import Preguntas from '../Homework/Preguntas';
 
 export default function container() {
   return (
