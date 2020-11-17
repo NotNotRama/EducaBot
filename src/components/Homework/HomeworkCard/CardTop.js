@@ -5,8 +5,10 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import CalendarTodayIcon from '@material-ui/icons/CalendarToday';
 import BorderColorIcon from '@material-ui/icons/BorderColor';
 import { cardTopStyles } from '../../../Styles';
+import StatusTitle from './StatusTitle';
+import Progreso from './Progreso';
 
-export default function Top({ lectura }) {
+export default function Top({ data }) {
   const {
     top,
     pencil,
@@ -18,6 +20,7 @@ export default function Top({ lectura }) {
     lightText,
     darkText,
   } = cardTopStyles();
+
   return (
     <Grid
       item
@@ -29,7 +32,7 @@ export default function Top({ lectura }) {
       <Grid item container className={top}>
         <Grid item xs={2}>
           <Box>
-            {lectura ? (
+            {data.icono === 'actividad' ? (
               <BorderColorIcon className={pencil} />
             ) : (
               <AssignmentIcon className={calendar} />
@@ -38,18 +41,12 @@ export default function Top({ lectura }) {
         </Grid>
         <Grid item container spacing={1} xs={7}>
           <Grid item xs={12}>
-            <Typography className={firstTitle}>LECTURA</Typography>
+            <Typography className={firstTitle}>{data.tipo}</Typography>
           </Grid>
           <Grid item xs={12}>
-            <Typography className={secondTitle}>
-              Cuentos para aprender ortografía
-            </Typography>
+            <Typography className={secondTitle}>{data.titulo}</Typography>
           </Grid>
-          <Grid item container xs={12}>
-            <Box className={boxStyle}>
-              <Typography className={thirdTitle}>¡NUEVA!</Typography>
-            </Box>
-          </Grid>
+          <StatusTitle data={data} />
           <Grid item container spacing={1} xs={12}>
             <Grid item>
               <CalendarTodayIcon fontSize="small" />
@@ -63,22 +60,7 @@ export default function Top({ lectura }) {
               <Typography className={darkText}>15 de Abril</Typography>
             </Grid>
           </Grid>
-          <Grid item container spacing={1} xs={12}>
-            <Grid item>
-              <CircularProgress
-                variant="static"
-                value={75}
-                style={{ color: '#50D174' }}
-                size={20}
-              />
-            </Grid>
-            <Grid item>
-              <Typography className={lightText}>Progreso</Typography>
-            </Grid>
-            <Grid item>
-              <Typography className={darkText}>75%</Typography>
-            </Grid>
-          </Grid>
+          <Progreso data={data} />
         </Grid>
         <Grid item container xs={12} lg={3}>
           <Grid item style={{ marginLeft: 'auto' }}>

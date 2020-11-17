@@ -1,21 +1,24 @@
+import { useState, useEffect } from 'react';
 import { Grid } from '@material-ui/core';
+
 import HomeworkCard from './HomeworkCard/HomeworkCard';
+import { LecturasArr } from '../../Data';
 
 export default function Lecturas() {
+  const [LecturasState, setLecturasState] = useState();
+
+  useEffect(() => {
+    setLecturasState(LecturasArr);
+  }, []);
+
   return (
     <Grid item container xs={12} sm={10} spacing={10}>
-      <Grid item xs={12} lg={6}>
-        <HomeworkCard />
-      </Grid>
-      <Grid item xs={12} lg={6}>
-        <HomeworkCard />
-      </Grid>
-      <Grid item xs={12} lg={6}>
-        <HomeworkCard />
-      </Grid>
-      <Grid item xs={12} lg={6}>
-        <HomeworkCard />
-      </Grid>
+      {LecturasState &&
+        LecturasState.map((data) => (
+          <Grid item xs={12} lg={6}>
+            <HomeworkCard data={data} />
+          </Grid>
+        ))}
     </Grid>
   );
 }

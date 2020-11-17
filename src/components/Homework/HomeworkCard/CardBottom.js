@@ -4,8 +4,9 @@ import Brightness1Icon from '@material-ui/icons/Brightness1';
 import ChatBubbleIcon from '@material-ui/icons/ChatBubble';
 import { cardBottomStyles } from '../../../Styles';
 
-export default function Bottom() {
+export default function Bottom({ data }) {
   const { bottom, roundedButton, lengua } = cardBottomStyles();
+
   return (
     <Grid
       item
@@ -33,7 +34,7 @@ export default function Bottom() {
           />
         </Grid>
         <Grid item>
-          <Typography className={lengua}>Lengua</Typography>
+          <Typography className={lengua}>{data.materia}</Typography>
         </Grid>
       </Grid>
       <Grid item>

@@ -19,6 +19,7 @@ export const mainTitleStyles = makeStyles({
 export const titlesStyles = makeStyles({
   titles: {
     marginTop: 20,
+    fontFamily: 'DM Sans',
   },
 });
 export const homeworkCardStyles = makeStyles({
@@ -87,10 +88,27 @@ export const cardTopStyles = makeStyles({
   thirdTitle: {
     color: 'white',
   },
-  boxStyle: {
+  nuevoStyle: {
     backgroundColor: '#27A8FF',
     padding: 4,
     borderRadius: 3,
+  },
+  nuevoTitleStyle: {
+    color: 'white',
+    fontFamily: 'DM Sans',
+    fontWeight: 'bold',
+    fontSize: 12,
+  },
+  demoradoStyle: {
+    backgroundColor: '#EED1CB',
+    padding: 4,
+    borderRadius: 3,
+  },
+  demoradoTitleStyle: {
+    color: '#F45C3A',
+    fontFamily: 'DM Sans',
+    fontWeight: 'bold',
+    fontSize: 12,
   },
   lightText: {
     fontFamily: 'DM Sans',
