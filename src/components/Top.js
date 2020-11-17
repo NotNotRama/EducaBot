@@ -128,7 +128,7 @@ export default function Top() {
             </Grid>
           </Grid>
         </Grid>
-        <Grid item container xs={12} sm={3}>
+        <Grid item container xs={12} lg={3}>
           <Grid item style={{ marginLeft: 'auto' }}>
             <Button
               variant="contained"

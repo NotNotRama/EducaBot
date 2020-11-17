@@ -45,8 +45,8 @@ export default function Bottom() {
         alignItems="center"
         className={classes.roundedButton}
         xs={4}
-        sm={6}
-        md={4}
+        sm={4}
+        md={2}
         container
       >
         <Grid item>
