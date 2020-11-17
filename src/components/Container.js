@@ -41,9 +41,9 @@ export default function container() {
       </Grid>
       <Lecutras />
       <Grid item xs={12} sm={3}>
-        <Box className={classes.mg} pl={7} pt={2}>
+        <Box className={classes.mg} pl={[7, 5, 14, 18]} pt={2}>
           <Typography variant="h8" component="h5">
-            LECTURAS
+            Preguntas
           </Typography>
         </Box>
       </Grid>

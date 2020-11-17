@@ -12,13 +12,18 @@ const useStyles = makeStyles({
     border: '1px solid grey',
   },
   bottom: {
-    borderTop: '1px solid grey',
+    borderTop: '1px solid #DFDFDA',
     padding: 15,
   },
   roundedButton: {
     borderRadius: 50,
-    border: '1px solid grey',
+    border: '1px solid #DFDFDA',
     padding: 3,
+  },
+  lengua: {
+    fontFamily: 'DM Sans',
+    fontSize: 14,
+    fontWeight: 'bold',
   },
 });
 
@@ -51,7 +56,7 @@ export default function Bottom() {
           />
         </Grid>
         <Grid item>
-          <Typography>Lengua</Typography>
+          <Typography className={classes.lengua}>Lengua</Typography>
         </Grid>
       </Grid>
       <Grid item>

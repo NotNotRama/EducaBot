@@ -3,8 +3,11 @@ import { red } from '@material-ui/core/colors';
 import { makeStyles } from '@material-ui/styles';
 
 const useStyles = makeStyles({
-  padding: {
+  header: {
+    fontFamily: 'DM Sans',
     padding: '35px',
+    fontWeight: 500,
+    fontSize: 28,
   },
   bg: {
     background: red,
@@ -16,7 +19,9 @@ export default function Header() {
   return (
     <AppBar style={{ background: '#2E3B55' }} position="static">
       <Toolbar>
-        <Typography className={classes.padding}>This is our header</Typography>
+        <Typography className={classes.header}>
+          UI Styles - Aula en casa
+        </Typography>
       </Toolbar>
     </AppBar>
   );
