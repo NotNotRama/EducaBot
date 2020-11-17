@@ -3,23 +3,23 @@ import { red } from '@material-ui/core/colors';
 import { makeStyles } from '@material-ui/styles';
 
 const useStyles = makeStyles({
-  header: {
+  title: {
     fontFamily: 'DM Sans',
     padding: '35px',
     fontWeight: 500,
     fontSize: 28,
   },
-  bg: {
-    background: red,
+  header: {
+    background: '#4F36D6',
   },
 });
 
 export default function Header() {
   const classes = useStyles();
   return (
-    <AppBar style={{ background: '#2E3B55' }} position="static">
+    <AppBar className={classes.header} position="static">
       <Toolbar>
-        <Typography className={classes.header}>
+        <Typography className={classes.title}>
           UI Styles - Aula en casa
         </Typography>
       </Toolbar>

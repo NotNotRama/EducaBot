@@ -5,6 +5,7 @@ import ChatBubbleIcon from '@material-ui/icons/ChatBubble';
 import AssignmentIcon from '@material-ui/icons/Assignment';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import CalendarTodayIcon from '@material-ui/icons/CalendarToday';
+import BorderColorIcon from '@material-ui/icons/BorderColor';
 import { makeStyles } from '@material-ui/core/styles';
 import Bottom from './Bottom';
 import { grey } from '@material-ui/core/colors';
@@ -20,8 +21,13 @@ const useStyles = makeStyles({
   top: {
     padding: 15,
   },
-  icon: {
-    background: '#01CEAA',
+  calendar: {
+    background: '#A7E8DD',
+    borderRadius: 6,
+    padding: 6,
+  },
+  pencil: {
+    background: '#FFEEC0',
     borderRadius: 6,
     padding: 6,
   },
@@ -66,7 +72,8 @@ const useStyles = makeStyles({
   },
 });
 
-export default function Top() {
+export default function Top({ lectura }) {
+  console.log(lectura);
   const classes = useStyles();
   return (
     <Grid
@@ -79,7 +86,11 @@ export default function Top() {
       <Grid item container className={classes.top}>
         <Grid item xs={2}>
           <Box>
-            <AssignmentIcon className={classes.icon} />
+            {lectura ? (
+              <BorderColorIcon className={classes.pencil} />
+            ) : (
+              <AssignmentIcon className={classes.calendar} />
+            )}
           </Box>
         </Grid>
         <Grid item container spacing={1} xs={7}>
@@ -133,7 +144,7 @@ export default function Top() {
             <Button
               variant="contained"
               style={{
-                backgroundColor: '#4F36D6',
+                backgroundColor: '#260167',
                 textTransform: 'none',
               }}
             >

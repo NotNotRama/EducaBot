@@ -31,12 +31,12 @@ const useStyles = makeStyles({
   },
 });
 
-export default function SimpleCard() {
+export default function SimpleCard({ lectura }) {
   const classes = useStyles();
 
   return (
     <Grid container className={classes.borderContainer}>
-      <Top />
+      <Top lectura={lectura} />
       <Bottom />
     </Grid>
   );
