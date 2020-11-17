@@ -5,6 +5,7 @@ import ChatBubbleIcon from '@material-ui/icons/ChatBubble';
 import AssignmentIcon from '@material-ui/icons/Assignment';
 import { makeStyles } from '@material-ui/core/styles';
 import Bottom from './Bottom';
+import Top from './Top';
 
 const useStyles = makeStyles({
   borderContainer: {
@@ -34,45 +35,7 @@ export default function SimpleCard() {
 
   return (
     <Grid container className={classes.borderContainer}>
-      <Grid
-        item
-        container
-        direction="row"
-        justify="space-evenly"
-        alignItems="center"
-      >
-        <Grid item container className={classes.top}>
-          <Grid item xs={2}>
-            <Box>
-              <AssignmentIcon className={classes.icon} />
-            </Box>
-          </Grid>
-          <Grid item container xs={7}>
-            <Grid item xs={12}>
-              <Typography>This is our header</Typography>
-            </Grid>
-            <Grid item xs={12}>
-              <Typography>This is our header</Typography>
-            </Grid>
-            <Grid item xs={12}>
-              <Typography>This is our header</Typography>
-            </Grid>
-            <Grid item xs={12}>
-              <Typography>This is our header</Typography>
-            </Grid>
-          </Grid>
-          <Grid item xs={3}>
-            <Button
-              variant="contained"
-              style={{ backgroundColor: '#4F36D6', textTransform: 'none' }}
-            >
-              <Typography variant="body2" style={{ color: '#FFFFFF' }}>
-                Continuar
-              </Typography>
-            </Button>
-          </Grid>
-        </Grid>
-      </Grid>
+      <Top />
       <Bottom />
     </Grid>
   );
