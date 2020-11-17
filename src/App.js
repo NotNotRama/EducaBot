@@ -1,6 +1,6 @@
 import { Grid } from '@material-ui/core';
-import Header from './components/Header';
-import Container from './components/Container';
+import Header from './components/Header/Header';
+import Container from './components/Container/Container';
 
 function App() {
   return (

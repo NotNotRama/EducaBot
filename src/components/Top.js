@@ -8,7 +8,7 @@ import CalendarTodayIcon from '@material-ui/icons/CalendarToday';
 import BorderColorIcon from '@material-ui/icons/BorderColor';
 import { makeStyles } from '@material-ui/core/styles';
 import Bottom from './Bottom';
-import { grey } from '@material-ui/core/colors';
+import { grey, red } from '@material-ui/core/colors';
 
 const useStyles = makeStyles({
   borderContainer: {
@@ -25,11 +25,13 @@ const useStyles = makeStyles({
     background: '#A7E8DD',
     borderRadius: 6,
     padding: 6,
+    color: '#01CEAA',
   },
   pencil: {
     background: '#FFEEC0',
     borderRadius: 6,
     padding: 6,
+    color: '#FFB800',
   },
   roundedButton: {
     borderRadius: 50,
@@ -73,7 +75,6 @@ const useStyles = makeStyles({
 });
 
 export default function Top({ lectura }) {
-  console.log(lectura);
   const classes = useStyles();
   return (
     <Grid
