@@ -1,4 +1,4 @@
-import { Grid, Typography, Box, Button } from '@material-ui/core';
+import { Grid, Typography, Box } from '@material-ui/core';
 import { cardTopStyles } from '../../../Styles';
 
 export default function StatusTitle({ data }) {
@@ -8,21 +8,32 @@ export default function StatusTitle({ data }) {
     demoradoTitleStyle,
     nuevoTitleStyle,
   } = cardTopStyles();
-  return data.nuevo ? (
-    <Grid item container xs={12}>
-      <Box className={nuevoStyle}>
-        <Typography className={nuevoTitleStyle}>
-          {data.nuevo && '¡NUEVO!'}
-        </Typography>
-      </Box>
-    </Grid>
-  ) : (
-    <Grid item container xs={12}>
-      <Box className={demoradoStyle}>
-        <Typography className={demoradoTitleStyle}>
-          {!data.nuevo && '¡Estás demorad@!'}
-        </Typography>
-      </Box>
-    </Grid>
-  );
+
+  if (data.nuevo) {
+    return (
+      <Grid item container xs={12}>
+        <Box className={nuevoStyle}>
+          <Typography className={nuevoTitleStyle}>
+            {data.nuevo && '¡NUEVO!'}
+          </Typography>
+        </Box>
+      </Grid>
+    );
+  }
+
+  if (data.demorado) {
+    return (
+      <Grid item container xs={12}>
+        <Box className={demoradoStyle}>
+          <Typography className={demoradoTitleStyle}>
+            {!data.nuevo && '¡Estás demorad@!'}
+          </Typography>
+        </Box>
+      </Grid>
+    );
+  }
+
+  if (!data.demorado && !data.nuevo) {
+    return <div></div>;
+  }
 }

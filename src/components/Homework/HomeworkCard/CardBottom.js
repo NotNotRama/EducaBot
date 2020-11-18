@@ -23,7 +23,7 @@ export default function Bottom({ data }) {
         alignItems="center"
         className={roundedButton}
         xs={4}
-        sm={4}
+        sm={3}
         md={2}
         container
       >

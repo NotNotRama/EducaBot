@@ -1,7 +1,6 @@
 import React from 'react';
 import { Grid, Typography, Box, Button } from '@material-ui/core';
 import AssignmentIcon from '@material-ui/icons/Assignment';
-import CircularProgress from '@material-ui/core/CircularProgress';
 import CalendarTodayIcon from '@material-ui/icons/CalendarToday';
 import BorderColorIcon from '@material-ui/icons/BorderColor';
 import { cardTopStyles } from '../../../Styles';
@@ -15,22 +14,15 @@ export default function Top({ data }) {
     calendar,
     firstTitle,
     secondTitle,
-    boxStyle,
-    thirdTitle,
     lightText,
     darkText,
+    demoradoText,
   } = cardTopStyles();
 
   return (
-    <Grid
-      item
-      container
-      direction="row"
-      justify="space-evenly"
-      alignItems="center"
-    >
+    <Grid item container direction="row" alignItems="center">
       <Grid item container className={top}>
-        <Grid item xs={2}>
+        <Grid item xs={3} sm={2}>
           <Box>
             {data.icono === 'actividad' ? (
               <BorderColorIcon className={pencil} />
@@ -57,7 +49,9 @@ export default function Top({ data }) {
               </Box>
             </Grid>
             <Grid item>
-              <Typography className={darkText}>15 de Abril</Typography>
+              <Typography className={!data.demorado ? darkText : demoradoText}>
+                15 de Abril
+              </Typography>
             </Grid>
           </Grid>
           <Progreso data={data} />

@@ -20,6 +20,8 @@ export const titlesStyles = makeStyles({
   titles: {
     marginTop: 20,
     fontFamily: 'DM Sans',
+    fontSize: 14,
+    fontWeight: 'bold',
   },
 });
 export const homeworkCardStyles = makeStyles({
@@ -123,5 +125,12 @@ export const cardTopStyles = makeStyles({
     fontWeight: 'bold',
     fontSize: 14,
     color: 'black',
+  },
+  demoradoText: {
+    fontFamily: 'DM Sans',
+    fontStyle: 'normal',
+    fontWeight: 'bold',
+    fontSize: 14,
+    color: '#F45C3A',
   },
 });
