@@ -20,8 +20,9 @@ export const titlesStyles = makeStyles({
   titles: {
     marginTop: 20,
     fontFamily: 'DM Sans',
-    fontSize: 14,
+    fontSize: 20,
     fontWeight: 'bold',
+    textAlign: 'center',
   },
 });
 export const homeworkCardStyles = makeStyles({

@@ -10,9 +10,9 @@ export default function container() {
   return (
     <Grid container justify="center" alignItems="center" spacing={5}>
       <MainTitle />
-      <Title title={'Lecturas'} />
+      <Title title={'LECTURAS'} />
       <Lecutras />
-      <Title title={'Preguntas'} />
+      <Title title={'PREGUNTAS'} />
       <Preguntas />
     </Grid>
   );

@@ -4,6 +4,7 @@ import Container from './components/Container/Container';
 
 function App() {
   return (
+    //Container for the whole page
     <Grid container direction="column">
       <Grid item>
         <Header />

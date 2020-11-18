@@ -1,23 +1,21 @@
-import {
-  createMuiTheme,
-  makeStyles,
-  ThemeProvider,
-} from '@material-ui/core/styles';
+import { addDecorator } from '@storybook/react';
+import { Grid } from '@material-ui/core';
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
 };
 
-const theme = createMuiTheme({
-  typography: {
-    fontFamily: ['serif'].join(','),
-  },
-});
-
 export const decorators = [
   (Story) => (
-    <ThemeProvider theme={theme}>
+    <Grid
+      container
+      spacing={0}
+      direction="column"
+      alignItems="center"
+      justify="center"
+      style={{ minHeight: '100vh' }}
+    >
       <Story />
-    </ThemeProvider>
+    </Grid>
   ),
 ];
