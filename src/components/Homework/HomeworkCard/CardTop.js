@@ -22,6 +22,7 @@ export default function Top({ data }) {
   return (
     <Grid item container direction="row" alignItems="center">
       <Grid item container className={top}>
+        {/*Icon on the left side*/}
         <Grid item xs={3} sm={2}>
           <Box>
             {data.icono === 'actividad' ? (
@@ -54,6 +55,7 @@ export default function Top({ data }) {
               </Typography>
             </Grid>
           </Grid>
+          {/*Dynamic progress bar*/}
           <Progreso data={data} />
         </Grid>
         <Grid item container xs={12} lg={3}>

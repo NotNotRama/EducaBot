@@ -1,11 +1,11 @@
 /* eslint-disable import/no-anonymous-default-export */
-import Header from './Header';
+import HeaderComponent from './Header';
 
 export default {
   title: 'Header',
-  component: Header,
+  component: HeaderComponent,
 };
 
-export const Primary = () => {
-  return <Header />;
+export const Header = () => {
+  return <HeaderComponent />;
 };

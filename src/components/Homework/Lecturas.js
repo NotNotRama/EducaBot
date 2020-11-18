@@ -8,6 +8,7 @@ export default function Lecturas() {
   const [LecturasState, setLecturasState] = useState();
 
   useEffect(() => {
+    //simulate fetch data from an api
     setLecturasState(LecturasArr);
   }, []);
 
