@@ -1,16 +1,16 @@
-import { Grid, Typography, Box, Paper } from '@material-ui/core';
+import { Grid, Typography, Box, Paper } from '@material-ui/core'
 
-import { titlesStyles } from '../../Styles';
+import { titlesStyles } from '../../Styles'
 
-export default function Title({ title }) {
-  const { titles } = titlesStyles();
+export default function Title ({ title }) {
+  const { titles } = titlesStyles()
   return (
     <Grid item xs={12} sm={3}>
       <Box className={titles} pt={2}>
-        <Typography variant="h8" component="h5">
+        <Typography variant='h8' component='h5'>
           {title}
         </Typography>
       </Box>
     </Grid>
-  );
+  )
 }

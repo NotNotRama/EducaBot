@@ -7,7 +7,7 @@ export const LecturasArr = [
     demorado: false,
     fechaEntrega: '15 de Abril',
     progreso: 25,
-    materia: 'Lengua',
+    materia: 'Lengua'
   },
   {
     icono: 'lectura',
@@ -17,7 +17,7 @@ export const LecturasArr = [
     demorado: true,
     fechaEntrega: '15 de Abril',
     progreso: 80,
-    materia: 'Lengua',
+    materia: 'Lengua'
   },
   {
     icono: 'lectura',
@@ -27,7 +27,7 @@ export const LecturasArr = [
     demorado: false,
     fechaEntrega: '15 de Abril',
     progreso: 100,
-    materia: 'Lengua',
+    materia: 'Lengua'
   },
   {
     icono: 'lectura',
@@ -37,9 +37,9 @@ export const LecturasArr = [
     demorado: false,
     fechaEntrega: '15 de Abril',
     progreso: 0,
-    materia: 'Lengua',
-  },
-];
+    materia: 'Lengua'
+  }
+]
 
 export const ActividadesArr = [
   {
@@ -51,7 +51,7 @@ export const ActividadesArr = [
     fechaEntrega: '15 de Abril',
     progreso: 100,
     esperandoCorreccion: true,
-    materia: 'Fisica',
+    materia: 'Fisica'
   },
   {
     icono: 'actividad',
@@ -62,7 +62,7 @@ export const ActividadesArr = [
     fechaEntrega: '15 de Abril',
     progreso: 25,
     esperandoCorreccion: false,
-    materia: 'Fisica',
+    materia: 'Fisica'
   },
   {
     icono: 'actividad',
@@ -73,7 +73,7 @@ export const ActividadesArr = [
     fechaEntrega: '15 de Abril',
     progreso: 75,
     esperandoCorreccion: false,
-    materia: 'Fisica',
+    materia: 'Fisica'
   },
   {
     icono: 'actividad',
@@ -84,6 +84,6 @@ export const ActividadesArr = [
     fechaEntrega: '15 de Abril',
     progreso: 100,
     esperandoCorreccion: false,
-    materia: 'Fisica',
-  },
-];
+    materia: 'Fisica'
+  }
+]

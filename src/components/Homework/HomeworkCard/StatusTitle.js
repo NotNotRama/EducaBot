@@ -1,13 +1,13 @@
-import { Grid, Typography, Box } from '@material-ui/core';
-import { cardTopStyles } from '../../../Styles';
+import { Grid, Typography, Box } from '@material-ui/core'
+import { cardTopStyles } from '../../../Styles'
 
-export default function StatusTitle({ data }) {
+export default function StatusTitle ({ data }) {
   const {
     nuevoStyle,
     demoradoStyle,
     demoradoTitleStyle,
-    nuevoTitleStyle,
-  } = cardTopStyles();
+    nuevoTitleStyle
+  } = cardTopStyles()
 
   if (data.nuevo) {
     return (
@@ -18,7 +18,7 @@ export default function StatusTitle({ data }) {
           </Typography>
         </Box>
       </Grid>
-    );
+    )
   }
 
   if (data.demorado) {
@@ -30,10 +30,10 @@ export default function StatusTitle({ data }) {
           </Typography>
         </Box>
       </Grid>
-    );
+    )
   }
 
   if (!data.demorado && !data.nuevo) {
-    return <div></div>;
+    return <div />
   }
 }

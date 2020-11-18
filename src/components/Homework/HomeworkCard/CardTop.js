@@ -1,13 +1,13 @@
-import React from 'react';
-import { Grid, Typography, Box, Button } from '@material-ui/core';
-import AssignmentIcon from '@material-ui/icons/Assignment';
-import CalendarTodayIcon from '@material-ui/icons/CalendarToday';
-import BorderColorIcon from '@material-ui/icons/BorderColor';
-import { cardTopStyles } from '../../../Styles';
-import StatusTitle from './StatusTitle';
-import Progreso from './Progreso';
+import React from 'react'
+import { Grid, Typography, Box, Button } from '@material-ui/core'
+import AssignmentIcon from '@material-ui/icons/Assignment'
+import CalendarTodayIcon from '@material-ui/icons/CalendarToday'
+import BorderColorIcon from '@material-ui/icons/BorderColor'
+import { cardTopStyles } from '../../../Styles'
+import StatusTitle from './StatusTitle'
+import Progreso from './Progreso'
 
-export default function Top({ data }) {
+export default function Top ({ data }) {
   const {
     top,
     pencil,
@@ -16,13 +16,13 @@ export default function Top({ data }) {
     secondTitle,
     lightText,
     darkText,
-    demoradoText,
-  } = cardTopStyles();
+    demoradoText
+  } = cardTopStyles()
 
   return (
-    <Grid item container direction="row" alignItems="center">
+    <Grid item container direction='row' alignItems='center'>
       <Grid item container className={top}>
-        {/*Icon on the left side*/}
+        {/* Icon on the left side */}
         <Grid item xs={3} sm={2}>
           <Box>
             {data.icono === 'actividad' ? (
@@ -40,9 +40,10 @@ export default function Top({ data }) {
             <Typography className={secondTitle}>{data.titulo}</Typography>
           </Grid>
           <StatusTitle data={data} />
+
           <Grid item container spacing={1} xs={12}>
             <Grid item>
-              <CalendarTodayIcon fontSize="small" />
+              <CalendarTodayIcon fontSize='small' />
             </Grid>
             <Grid item>
               <Box>
@@ -55,19 +56,20 @@ export default function Top({ data }) {
               </Typography>
             </Grid>
           </Grid>
-          {/*Dynamic progress bar*/}
+          {/* Dynamic progress bar */}
           <Progreso data={data} />
         </Grid>
+        {/* "Continuar" button */}
         <Grid item container xs={12} lg={3}>
           <Grid item style={{ marginLeft: 'auto' }}>
             <Button
-              variant="contained"
+              variant='contained'
               style={{
                 backgroundColor: '#260167',
-                textTransform: 'none',
+                textTransform: 'none'
               }}
             >
-              <Typography variant="body2" style={{ color: '#FFFFFF' }}>
+              <Typography variant='body2' style={{ color: '#FFFFFF' }}>
                 Continuar
               </Typography>
             </Button>
@@ -75,5 +77,5 @@ export default function Top({ data }) {
         </Grid>
       </Grid>
     </Grid>
-  );
+  )
 }

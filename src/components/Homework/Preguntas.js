@@ -1,15 +1,15 @@
-import { useState, useEffect } from 'react';
-import { Grid } from '@material-ui/core';
+import { useState, useEffect } from 'react'
+import { Grid } from '@material-ui/core'
 
-import HomeworkCard from './HomeworkCard/HomeworkCard';
-import { ActividadesArr } from '../../Data';
+import HomeworkCard from './HomeworkCard/HomeworkCard'
+import { ActividadesArr } from '../../Data'
 
-export default function Lecturas() {
-  const [ActividadesState, setActividadesState] = useState();
+export default function Lecturas () {
+  const [ActividadesState, setActividadesState] = useState()
 
   useEffect(() => {
-    setActividadesState(ActividadesArr);
-  }, []);
+    setActividadesState(ActividadesArr)
+  }, [])
 
   return (
     <Grid item container xs={12} sm={10} spacing={10}>
@@ -20,5 +20,5 @@ export default function Lecturas() {
           </Grid>
         ))}
     </Grid>
-  );
+  )
 }
